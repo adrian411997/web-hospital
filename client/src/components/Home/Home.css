@@ -1,0 +1,18 @@
+.content-home {
+  padding: 10px;
+}
+.intro {
+  text-align: center;
+}
+.intro > h3 {
+  margin: 10px 0px;
+}
+.instruc-reservar {
+  border: 1px solid black;
+  padding: 30px;
+  border: 8px solid;
+  border-color: rgb(238, 245, 247);
+  margin: 20px;
+  background-color: rgb(127, 157, 227);
+  color: white;
+}

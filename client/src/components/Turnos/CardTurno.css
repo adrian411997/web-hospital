@@ -1,0 +1,30 @@
+.card {
+  width: 80%;
+  border: 1px solid black;
+  margin: 10px 0px;
+  padding: 20px;
+  border-radius: 0.3rem;
+}
+.card > div {
+  margin: 20px 0px;
+}
+.card-buttons {
+  justify-content: space-around;
+  display: flex;
+}
+.btn-edit {
+  padding: 10px;
+  color: white;
+  background-color: rgb(255, 193, 7);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+.btn-delete {
+  padding: 10px;
+  color: white;
+  background-color: rgb(200, 35, 51);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3em;
+}

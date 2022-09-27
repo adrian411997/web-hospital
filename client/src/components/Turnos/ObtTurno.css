@@ -1,0 +1,50 @@
+.formInputPaciente,
+.formTurno {
+  display: block;
+
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-content {
+  width: 50%;
+  border: 8px solid;
+  border-color: rgb(238, 245, 247);
+  padding: 20px;
+  display: flex;
+  background-color: rgb(127, 157, 227);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-content > div {
+  width: 90%;
+  margin: 10px 0px;
+}
+.form-content > div > input,
+select {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.btn-form {
+  padding: 10px;
+  color: white;
+  background-color: rgb(92, 184, 92);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+@media (max-width: 750px) {
+  .form-content {
+    width: 80%;
+  }
+}

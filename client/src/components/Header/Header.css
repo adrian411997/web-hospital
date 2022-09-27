@@ -1,0 +1,92 @@
+.content-buttons {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5em;
+  background-color: rgb(23, 162, 184);
+  color: white;
+}
+.title {
+  margin-left: 10px;
+  color: white;
+}
+.title > a > h2 {
+  color: white;
+}
+.content-header {
+  height: 30vh;
+  background-image: url("../images/hospital.jpg");
+  background-size: 100% 100%, cover;
+}
+.contet-buttons-and-title {
+  background-color: rgb(92, 184, 92);
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.frase {
+  padding: 20px;
+  color: rgb(219, 66, 21);
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.checkbtn {
+  margin-right: 15px;
+
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+#check {
+  display: none;
+}
+
+#check:checked ~ .buttons-header {
+  left: 0%;
+}
+@media (max-width: 750px) {
+  .frase {
+    text-align: center;
+    font-size: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .checkbtn {
+    display: block;
+    padding: 0px 10px;
+  }
+  .buttons-header {
+    position: fixed;
+    width: 50% !important;
+    height: 100vh;
+    background-color: #3f3f3f;
+    top: 0px;
+    left: -100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s;
+    line-height: 5px;
+    z-index: 2;
+    font-size: 20px;
+  }
+  .tabs > button {
+    margin-bottom: 10px;
+  }
+  .btn {
+    margin-bottom: 10px;
+  }
+}
