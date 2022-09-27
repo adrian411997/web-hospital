@@ -1,49 +1,58 @@
-# ProductsForYou Info
+# Web Hospital Info
 
-This a short documentation about my app for IT-Crowd.
+Estoy es una corta documentación sobre mi app para el curso de Desarrollo Full Stack de Incluyeme en colaboración con Mercado Libre.
 
-## Tech what I used
+## Tecnologías que he usado:
 
 - React
+- Javascript
 - Node
 - Express
-- Bootstrap
+- Css puro
 - Redux-toolkit
 - React-redux
 - React-router V6
 
-## What does my project?
+## ¿Qué hace mi proyecto?
 
-This app show products stored in a database that is placed in Heroku. You can see information about that products clicking in "View more details" button.
-Also, you can create, change information or delete a product, but all these functions are only for the administrator and all these actions affect the database and consequently the Front End. You can access to all these functions through the Login In button. The admin's username is **User** and the password is **12345**. You can create a brand if yours is not in the database.
+Mi proyecto consiste en la creacion y modificacion de turnos utilizando una rest Api creada por mi mismo implementando un CRUD por lo que las acciones del usuario repercuten en la base de datos. A modo de una recepcion virtual en un hospital, el usuario puede:
+- Incorporarse en la base de datos: Para ello debe completar un formulario para poder realizar mas acciones en la página colocando su DNI.
+- Obtener un turno: El usuario estando registrado en la pagina, puede solicitar un turno en las diversas areas de atencion medica como neumonología, psicologia, etc, con doctores especificos en esa area.
+. Modificar un turno: Puede modificar un turno cambiando solo la fecha y hora de atención.
+- Eliminar un turno: Puede eliminar un turno si asi lo desea.
 
-## How work my api?
+## ¿Como funciona mi Api?
 
-My api delivers information throught the next endpoints:
+Mi api funciona entregando informacion desde los siguientes endpoints
 
-- api/products
-- api/brand
+- api/turnos
+- api/doctores
+- api/doctores/spec
 
-You can get, post, delete and put in products but in brand just get and post.
+## ¿Puedo ejecutar el proyecto de forma local?
 
-## Can I run locally in my pc?
+Si, el Backend y el Frontend estan configurados para ser ejectuados en el PC, solo se necesita las credenciales del usuario de postgress.
 
-Yes, the backend is configure for running locally , just install the dependencies in both folders (api and client):
+Dentro de la carpeta api, solo haz: 
 
 ```bash
 npm install
 ```
 
-Then, in the api folder:
+Luego:
 
 ```bash
 nodemon
 ```
 
-And in client folder:
+Luego en la carpeta cliente:
+```bash
+npm install
+```
+Y luego 
 
 ```bash
 npm start
 ```
 
-### Thank you for come!
+### Gracias por venir!
