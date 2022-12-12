@@ -3,14 +3,21 @@ const { Sequelize, Op } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
 
-const { DB_USER, DB_HOST, DB_PASSWORD } = process.env;
-let sequelize = new Sequelize(
-  `postgres://postgres:password@localhost/webpatients`,
-  {
-    logging: false, // set to console.log to see the raw SQL queries
-    native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-  }
-);
+const { DB_NAME, DB_USER, DB_HOST, DB_PASSWORD } = process.env;
+let sequelize = new Sequelize({
+  database: DB_NAME,
+  dialect: "postgres",
+  host: DB_HOST,
+  port: 5432,
+  username: DB_USER,
+  password: DB_PASSWORD,
+  pool: { max: 3, min: 1, iddle: 100 },
+  dialectOptions: {
+    ssl: { require: false, rejectUnauthorized: false },
+    keepAlive: true,
+  },
+  ssl: false,
+});
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
